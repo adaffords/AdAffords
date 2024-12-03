@@ -1,38 +1,588 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all ease 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* NavBar Designing */
+
+/* Star */
+
+nav {
+    width: 100%;
+    height: 70px;
+    background: white;
+    box-shadow: 0 0 10px 1px rgb(165, 165, 165);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav .logo {
+    font-family: "Stylish", serif;
+    font-size: 2.4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li a {
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+    font-size: 0.9;
+    transition: all ease 0.3s;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    border-radius: 50px;
+    width: 0%;
+    transition: all ease 0.3s;
+    background: rgb(0, 0, 0);
+    bottom: -10px;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+nav ul li:hover>a::before {
+    /* background: blue; */
+    width: 50%;
+}
+
+nav button {
+    padding: 8px 20px;
+    background: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.1s;
+    border: 2px solid black;
+}
+
+nav button:hover {
+    /* background: rgb(61, 61, 61); */
+    background: white;
+}
+
+nav button a {
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+nav button:hover>a {
+    color: black;
+    /* text-decoration: dotted; */
+}
+
+/* End */
+
+/* Designing Hero section */
+
+/* Start */
+
+main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 70px;
+}
+
+.hero {
+    background: gray;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero .hero-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 70px;
+    width: 50%;
+    height: 100%;
+    gap: 30px;
+    color: white;
+}
+
+.hero .hero-main .hero-heading {
+    font-size: 2.8rem;
+    width: 400px;
+}
+
+.hero .hero-main .hero-paragraph {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.hero .hero-main .hero-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero .hero-main .hero-btns .btn {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    transition: all ease 0.3s;
+}
+
+.hero .hero-main .hero-btns .btn a {
+    text-decoration: none;
+    color: black;
+    transition: all ease 0.3s;
+}
+
+.hero .hero-main .hero-btns .btn:nth-child(1) {
+    background: white;
+    border: 2px solid white;
+}
+
+.hero .hero-main .hero-btns .btn:nth-child(1):hover {
+    background: transparent;
+}
+
+.hero .hero-main .hero-btns .btn:nth-child(1):hover>a {
+    color: white;
+}
+
+.hero .hero-main .hero-btns .btn:nth-child(2) a {
+    color: white;
+}
+
+.hero .hero-main .hero-btns .btn:nth-child(2) {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.hero .hero-main .hero-btns .btn:nth-child(2):hover {
+    background: white;
+}
+
+.hero .hero-main .hero-btns .btn:nth-child(2):hover>a {
+    color: black;
+}
+
+/* End */
+
+/* Designing Feature Section */
+
+/* Start */
+
+.featureSection {
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.featureSection .feature-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featureSection .feature-heading {
+    width: 550px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.featureSection .feature-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 300px;
+    width: 340px;
+    gap: 20px;
+    padding: 10px;
+}
+
+.card-img {
+    font-size: 2.2rem;
+}
+
+.featureSection .feature-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.featureSection .feature-btns .btn {
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.featureSection .feature-btns .btn a {
+    color: black;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+.featureSection .feature-btns .learn-more {
+    color: rgb(255, 255, 255);
+    transition: all ease 0.3s;
+    border: 1px solid black;
+}
+
+.featureSection .feature-btns .sign-up a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.featureSection .feature-btns .learn-more:hover>a {
+    color: white;
+}
+
+.featureSection .feature-btns .learn-more:hover {
+    color: white;
+    background: black;
+}
+
+.featureSection .feature-btns .sign-up a:hover {
+    gap: 15px;
+    /* font-size: 1rem; */
+}
+
+/* End */
+
+/* Designing Benefit Section */
+
+/* Start */
+
+.benefitSection {
+    padding: 90px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.benefitSection .benefit-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+.benefitSection .benefit-main .benefit-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_left,
+.benefit-top_right {
+    width: 50%;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_left .top {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_left .bottom {
+    font-size: 2.4rem;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .top {
+    font-size: 1.19rem;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .bottom .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .bottom .btns .btn {
+    padding: 12px 18px;
+    /* font-size: 0.9rem; */
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .bottom .btns .btn:nth-child(1) {
+    background: white;
+    border: 1px solid black;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .bottom .btns .btn:nth-child(1):hover {
+    background-color: black;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .bottom .btns .btn:nth-child(1):hover>a {
+    color: white;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .bottom .btns .btn:nth-child(2):hover>a {
+    gap: 20px;
+}
+
+.benefitSection .benefit-main .benefit-top .benefit-top_right .bottom .btns .btn a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.benefitSection .benefit-main .benefit-bottom {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(165, 165, 165);
+}
+
+/* End */
+
+/* Designing Team Section */
+
+/* Start */
+
+.teamSection {
+    padding: 90px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 50px;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.teamSection .team-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.teamSection .team-main .team-first {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.teamSection .team-main .team-second {
+    font-size: 2.6rem;
+}
+
+.teamSection .team-main .team-third {
+    font-size: 1rem;
+}
+
+.teamSection .team-main .team-fourth {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* row-gap: 40px;
+    column-gap: 1px; */
+}
+
+.teamSection .team-main .team-fourth .team-card {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.teamSection .team-main .team-fourth .team-card .team-card-img {
+    width: 80px;
+    height: 80px;
+    background: rgb(165, 165, 165);
+    border-radius: 50px;
+}
+
+.teamSection .team-main .team-fourth .team-card .team-card-name {}
+
+.teamSection .team-main .team-fourth .team-card .team-card-name {}
+
+.teamSection .team-main .team-fourth .team-card .team-card-about {
+    width: 100%;
+}
+
+.teamSection .team-main .team-fourth .team-card .team-card-socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.teamSection .team-main .team-fourth .team-card .team-card-socialMedia a {
+    font-size: 1.2rem;
+    color: black;
+    transition: all ease 0.1s;
+}
+
+.teamSection .team-main .team-fourth .team-card .team-card-socialMedia a:nth-child(1):hover {
+    color: #DD2A7B;
+}
+
+.teamSection .team-main .team-fourth .team-card .team-card-socialMedia a:nth-child(2):hover {
+    color: #1877F2;
+}
+
+.teamSection .team-main .team-fourth .team-card .team-card-socialMedia a:nth-child(3):hover {
+    color: #0077B5;
+}
+
+/* End */
+
+/* Designing Convincing Section */
+
+/* Start */
+
+.convincingSection {
+    padding: 90px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 50px;
+    /* width: 100%; */
+    height: 100%;
+}
+
+.convincingSection .left,
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px
+}
+
+.convincingSection .left .left-heading {
+    font-size: 2.4rem;
+}
+
+.convincingSection .left .left-paragraph {
+    font-size: 0.9rem;
+}
+
+.convincingSection .left .left-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.convincingSection .left .left-btns .btns {
+    padding: 12px 18px;
+    /* font-size: 0.9rem; */
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid black;
+    background: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.convincingSection .left .left-btns .btns:nth-child(2){
+    background: white;
+}
+.convincingSection .left .left-btns .btns a{
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.convincingSection .left .left-btns .btns:nth-child(2) a{
+    color: black;
+}
+.convincingSection .left .left-btns .btns:nth-child(1):hover{
+    background: white;
+}
+.convincingSection .left .left-btns .btns:nth-child(1):hover>a{
+    color: black;
+}
+.convincingSection .left .left-btns .btns:nth-child(2):hover{
+    background: black;
+}
+.convincingSection .left .left-btns .btns:nth-child(2):hover>a{
+    color: white;
+}
+.convincingSection .right{
+    background: rgb(165, 165, 165);
+    height: 300px;
+    /* width: 100%; */
 }
