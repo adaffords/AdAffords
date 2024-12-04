@@ -491,7 +491,7 @@ main {
     background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Elon_Musk_Royal_Society_crop.jpg/800px-Elon_Musk_Royal_Society_crop.jpg) no-repeat;
     background-position: top;
     background-size: 100%;
-    /* transition: all ease 0.3s; */
+    transition: all ease 0.3s;
 }
 
 .teamSection .team-main .team-fourth .team-card:hover>.team-card-img {
@@ -500,6 +500,10 @@ main {
     width: 200px;
     height: 200px;
     border-radius: 12321px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    /* margin: auto; For centering the image */
 }
 
 /* .teamSection .team-main .team-fourth .team-card .team-card-name {} */
