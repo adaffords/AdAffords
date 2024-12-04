@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Blur from './Blur'
 const HeroSection = () => {
   return (
     <section className="hero">
+        <Blur/>
         <div className="hero-main">
         <h1 className="hero-heading">
             Transform Your Advertising with AdAfford Today

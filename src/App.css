@@ -107,9 +107,20 @@ main {
 }
 
 .hero {
-    background: gray;
+    /* background: url() no-repeat;
+    background-size: cover;
+    background-position: center; */
     width: 100%;
     height: 100vh;
+}
+
+.hero .blur {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    position: absolute;
+    top: 0px;
+    left: 0;
 }
 
 .hero .hero-main {
@@ -122,6 +133,7 @@ main {
     height: 100%;
     gap: 30px;
     color: white;
+    position: relative;
 }
 
 .hero .hero-main .hero-heading {
@@ -558,31 +570,170 @@ main {
     font-weight: 600;
     cursor: pointer;
 }
-.convincingSection .left .left-btns .btns:nth-child(2){
+
+.convincingSection .left .left-btns .btns:nth-child(2) {
     background: white;
 }
-.convincingSection .left .left-btns .btns a{
+
+.convincingSection .left .left-btns .btns a {
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
 }
-.convincingSection .left .left-btns .btns:nth-child(2) a{
+
+.convincingSection .left .left-btns .btns:nth-child(2) a {
     color: black;
 }
-.convincingSection .left .left-btns .btns:nth-child(1):hover{
+
+.convincingSection .left .left-btns .btns:nth-child(1):hover {
     background: white;
 }
-.convincingSection .left .left-btns .btns:nth-child(1):hover>a{
+
+.convincingSection .left .left-btns .btns:nth-child(1):hover>a {
     color: black;
 }
-.convincingSection .left .left-btns .btns:nth-child(2):hover{
+
+.convincingSection .left .left-btns .btns:nth-child(2):hover {
     background: black;
 }
-.convincingSection .left .left-btns .btns:nth-child(2):hover>a{
+
+.convincingSection .left .left-btns .btns:nth-child(2):hover>a {
     color: white;
 }
-.convincingSection .right{
+
+.convincingSection .right {
     background: rgb(165, 165, 165);
     height: 300px;
     /* width: 100%; */
 }
+
+/* End */
+
+/* Designing Contact Section */
+
+/* Start */
+
+.contactSection {
+    padding: 90px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    gap: 50px;
+    /* width: 100%; */
+    height: 100%;
+    flex-direction: column;
+}
+
+.contactSection .contact-top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactSection .contact-top .top-first {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+}
+
+.contactSection .contact-top .top-second {
+    font-size: 3rem;
+}
+
+.contactSection .contact-bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+
+.contactSection .contact-bottom .left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contactSection .contact-bottom .left form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.contactSection .contact-bottom .left form div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 5px;
+    flex-direction: column;
+}
+.contactSection .contact-bottom .left form div label{
+    font-size: 1.2rem;
+}
+.contactSection .contact-bottom .left form div input{
+    width: 340px;
+    height: 45px;
+    padding-left: 10px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid black;
+}
+.contactSection .contact-bottom .left form div input:focus, input:focus>input::placeholder  {
+    background: black;
+    color: white;
+    border-radius: 50px;
+    padding-left: 15px;
+}
+.contactSection .contact-bottom .left form div textarea:focus{
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+}
+.contactSection .contact-bottom .left form div textarea{
+    width: 330px;
+    height: 140px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid black;
+}
+.contactSection .contact-bottom .left form #submit{
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid black;
+    background: transparent;
+    font-weight: 500;
+}
+.contactSection .contact-bottom .left form #submit:hover{
+    border-radius: 50px;
+    background: black;
+    color: white;
+}
+.contactSection .contact-bottom .right {
+    width: 50%;
+}
+
+.contactSection .contact-bottom .right iframe {
+    width: 100%;
+}
+
+/* .contactSection .contact-bottom .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;  
+} */

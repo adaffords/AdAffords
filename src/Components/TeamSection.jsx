@@ -27,7 +27,7 @@ const TeamSection = () => {
                 <TeamCards
                 name="Shahid Jamal"
                 role="Tech Lead"
-                about="David ensures our platform runs smoothly, enhancing user experience and functionality."
+                about="Shahid ensures our platform runs smoothly, enhancing user experience and functionality."
                 />
             </div>
         </div>

@@ -5,6 +5,7 @@ import FeatureSection from '../Components/FeatureSection'
 import BenefitSection from '../Components/BenefitSection'
 import TeamSection from '../Components/TeamSection'
 import ConvincingSection from '../Components/ConvincingSection'
+import ContactSection from '../Components/ContactSection'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <BenefitSection/>
         <TeamSection />
         <ConvincingSection />
+        <ContactSection />
       </main>
     </>
   )
